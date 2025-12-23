@@ -69,7 +69,4 @@ dist/
 nbdist/
 .nb-gradle/
 
-# Exportaciones de diagramas (mantener .puml)
-/Calculadora*.png
-/Diagrama*.png
-/flujoCalculadora.png
+
