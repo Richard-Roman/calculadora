@@ -2,14 +2,14 @@
 
 Una calculadora con arquitectura limpia: State Pattern (4 estados), Strategy Pattern (operaciones intercambiables), manejo de errores centralizado.
 
-## 📋 Características
+## Características
 
 - Operaciones: +, −, ×, ÷, %, ^, √, x², 1/x, ±
 - Funciones: C (clear all), CE (clear entry), ← (backspace)
 - Formateo: BigDecimal sin notación científica
 - Errores: 1/0, √(-4) capturados y mostrados
 
-## 🚀 Inicio Rápido
+## Inicio Rápido
 
 ```bash
 cd calculadora/calculadora
@@ -17,7 +17,7 @@ mvn clean compile
 mvn javafx:run
 ```
 
-## 📂 Documentación Clave
+## Documentación Clave
 
 **[ARQUITECTURA.md](./ARQUITECTURA.md)** ← LEER PRIMERO
 - ¿Por qué 4 estados?
@@ -29,7 +29,7 @@ mvn javafx:run
 - `DIAGRAMA_ESTADOS.puml` - máquina de estados
 - `DIAGRAMA_LECTURA_RAPIDA.md` - guía visual
 
-## 🔧 Extender el Sistema
+## Extender el Sistema
 
 ### Agregar nueva operación
 
@@ -75,16 +75,16 @@ java -jar target/calculadora-1.0-SNAPSHOT.jar
 5. **Modo científico** (con más funciones)
 6. **Precisión BigDecimal** en operaciones (no solo formateo)
 
-## 📚 Recursos
+## Recursos
 
 - **Documentación**: Ver [`ARQUITECTURA.md`](./ARQUITECTURA.md)
 - **Diagramas UML**: Abrir archivos `.puml` en [PlantUML Editor](http://www.plantuml.com/plantuml/uml/)
 
-## 📄 Licencia
+## Licencia
 
 MIT License - Ver LICENSE file para detalles
 
-## 👨‍💻 Desarrollador
+## Desarrollador
 
 Richard - Diciembre 2025
 
