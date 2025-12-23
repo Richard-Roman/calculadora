@@ -1,0 +1,35 @@
+@startuml CalculadoraExtensible
+!theme plain
+
+title Cómo agregar operaciones
+
+interface Operacion {
+  ejecutar(a, b): double
+}
+
+Operacion <|.. Suma
+Operacion <|.. Resta
+Operacion <|.. Multiplicacion
+Operacion <|.. Division
+Operacion <|.. Potencia
+Operacion <|.. Modulo
+
+note bottom of Operacion
+  Patrón Strategy:
+  Agregar operación = 1 clase
+  Implementa Operacion
+  Sin cambios en Calculadora
+end note
+
+class Calculadora {
+  calcular(numero): double
+}
+
+Calculadora --> Operacion: ejecuta
+
+note right of Calculadora
+  Débilmente acoplada
+  a las operaciones
+end note
+
+@enduml

@@ -1,0 +1,42 @@
+@startuml CalculadoraResponsabilidades
+!theme plain
+
+title Quién hace qué
+
+package UI #FFFFCC {
+  component CalculadoraView
+}
+
+package Control #FFE4B5 {
+  component Controller
+  note right of Controller
+    Parsear entrada
+    Manejo de errores
+    Actualizar display
+  end note
+}
+
+package Dominio #FFEAA7 {
+  component Calculadora
+  note right of Calculadora
+    Máquina de estados
+    Ejecutar operación
+    Acumulador
+  end note
+}
+
+package Estrategia #D4E6E8 {
+  component Operacion
+  component OperacionUnaria
+  note right of Operacion
+    Lógica matemática
+    Validación
+  end note
+}
+
+CalculadoraView --> Controller
+Controller --> Calculadora
+Calculadora --> Operacion
+Calculadora --> OperacionUnaria
+
+@enduml

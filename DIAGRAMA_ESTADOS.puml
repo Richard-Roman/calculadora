@@ -1,0 +1,42 @@
+@startuml CalculadoraEstados
+!theme plain
+
+title ¿Por qué 4 estados?
+
+[*] --> Inicial
+Inicial --> Ingresando: dígito
+Ingresando --> OpSeleccionada: operador
+OpSeleccionada --> Resultado: igual
+Resultado --> Ingresando: dígito
+Resultado --> OpSeleccionada: operador
+
+Inicial --> Inicial: operador (ignorar)
+Ingresando --> Ingresando: más dígitos
+OpSeleccionada --> OpSeleccionada: cambiar operación
+
+Inicial --> Inicial: C
+Ingresando --> Inicial: C
+OpSeleccionada --> Inicial: C
+Resultado --> Inicial: C
+
+note left of Inicial
+  acumulado = 0
+  esperando número
+end note
+
+note left of Ingresando
+  acumulado = número
+  esperando operador
+end note
+
+note left of OpSeleccionada
+  acumulado = primero
+  op = seleccionada
+  esperando segundo
+end note
+
+note right of Resultado
+  acumulado = resultado
+  listo para la siguiente
+end note
+@enduml

@@ -1,0 +1,36 @@
+@startuml CalculadoraFlujo
+!theme plain
+
+title Flujo 3 + 4
+
+actor User
+participant View
+participant Controller
+participant Calc
+
+User -> View: pulsa 3
+View -> Controller: entrada
+Controller -> Calc: ingresarNumero
+note over Calc
+  acum = 3
+end note
+
+User -> View: pulsa +
+View -> Controller: entrada
+Controller -> Calc: selOp(Suma)
+note over Calc
+  op = Suma
+end note
+
+User -> View: pulsa 4
+View -> Controller: entrada
+Controller -> Calc: ingresarNumero
+
+User -> View: pulsa =
+View -> Controller: entrada
+Controller -> Calc: calcular
+note over Calc
+  acum = 7
+end note
+
+@enduml
