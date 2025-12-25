@@ -86,7 +86,7 @@ MIT License - Ver LICENSE file para detalles
 
 ## Desarrollador
 
-Richard - Diciembre 2025
+Richard Roman Tocto - Diciembre 2025
 
 ---
 
